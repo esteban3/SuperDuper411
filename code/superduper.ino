@@ -33,27 +33,25 @@ void loop()
       for(pos = 0; pos <= 180; pos += 1)
       {
         myservo.write(pos);               
-        delay(1);
+        delay(2);
       } 
-      for(pos2 = 0; pos2 <= 180; pos2 += 1)  
+      for(pos2 = 2; pos2 <= 178; pos2 += 1)  
       {                                   
         myservo2.write(pos2);               
-        delay(1);                        
+        delay(2);                        
       }
-          digitalWrite(laserpin, LOW);
-      for(pos = 180; pos>=0; pos-=1)      
+      for(pos = 178; pos>=2; pos-=1)      
       {                                
         myservo.write(pos);               
-        delay(1);                        
+        delay(2);                        
       } 
-      for(pos2 = 180; pos2>=0; pos2-=1)     
+      for(pos2 = 178; pos2>=2; pos2-=1)     
       {                                
         myservo2.write(pos2);             
-        delay(1);                        
+        delay(2);                        
       }
-      
-      
-      
     } 
+    digitalWrite(laserpin, LOW);  
+    delay(3000);    
   } 
 }
